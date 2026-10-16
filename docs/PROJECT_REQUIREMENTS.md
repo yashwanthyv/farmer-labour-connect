@@ -22,12 +22,21 @@ To develop a web application that connects farmers and agricultural labourers th
 - View applications from labourers.
 - Accept or reject job applications.
 
+- Search for available agricultural labourers by location, skills, and availability.
+- View labourer profiles and work experience.
+- Send job invitations directly to suitable labourers.
+
+
 ### 3.2 Agricultural Labourers
 - Register and log in to the application.
 - Create a profile with skills and experience.
 - Search for nearby agricultural jobs.
 - Apply for suitable jobs.
 - Track their application status.
+- Set availability dates and preferred types of agricultural work.
+- Receive job invitations from farmers.
+- Accept or decline job invitations.
+
 
 ## 4. Main Goal
 
