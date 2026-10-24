@@ -167,7 +167,7 @@
 
   &::before,
   &::after {
-    content: '';
+    content: "";
     position: absolute;
     top: -4.5px;
     border: 5px solid transparent;
@@ -183,9 +183,116 @@
   }
 }
 
-
-.project-title{
+.project-title {
   color: green;
   font-size: 36px;
   margin-bottom: 16px;
+}
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 40px;
+  background-color: #ffffff;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.logo {
+  color: #237a3b;
+  font-size: 24px;
+  margin: 0;
+}
+
+.navbar nav {
+  display: flex;
+  gap: 24px;
+}
+
+.navbar a {
+  color: #333333;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #237a3b;
+}
+
+.login-btn {
+  background-color: #237a3b;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.hero-section {
+  text-align: center;
+  padding: 90px 20px;
+  background-color: #f0f8f0;
+}
+
+.hero-section h1 {
+  color: #1f5f32;
+  font-size: 42px;
+  margin-bottom: 20px;
+}
+
+.hero-section p {
+  color: #555555;
+  font-size: 18px;
+  line-height: 1.7;
+  max-width: 700px;
+  margin: 0 auto 30px;
+}
+
+.hero-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 16px;
+}
+
+.hero-buttons button {
+  background-color: #237a3b;
+  color: white;
+  border: none;
+  padding: 14px 24px;
+  border-radius: 6px;
+  font-size: 16px;
+  cursor: pointer;
+}
+
+.hero-buttons button:hover {
+  background-color: #185b2a;
+}
+
+.services-section {
+  text-align: center;
+  padding: 30px;
+}
+
+.services-container {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+.service-card {
+  background-color: #f0f8f0;
+  padding: 20px;
+  border: 1px solid green;
+  width: 27.5%;
+  border-radius: 12px;
+}
+
+.service-card h3 {
+  color: green;
+}
+
+footer {
+  background-color: #237a3b;
+  color: white;
+  text-align: center;
+  padding: 15px;
 }

@@ -1,33 +1,80 @@
-import { useState } from 'react'
-import heroImg from './assets/hero.png'
-import reactLogo from './assets/react.svg'
-import viteLogo from './assets/vite.svg'
-import './App.css'
+import { useState } from "react";
+import heroImg from "./assets/hero.png";
+import reactLogo from "./assets/react.svg";
+import viteLogo from "./assets/vite.svg";
+import "./App.css";
+
+function ProjectHeading() {
+  return (
+    <>
+      <h1 className="project-title">Farmer–Labour Connect</h1>
+      <p>Connecting farmers and agricultural workers</p>
+    </>
+  );
+}
+
+function ProjectDescription({ text = "Project description coming soon===." }) {
+  return <p>{text}</p>;
+}
 
 function App() {
-  const [count, setCount] = useState(0)
+  const description = "Find nearby agricultural workers$$$.";
+  const [count, setCount] = useState(0);
 
   return (
     <>
-      <section id="center">
-        <div className="hero">
-          <img src={heroImg} className="base" width="170" height="179" alt="" />
-          <img src={reactLogo} className="framework" alt="React logo" />
-          <img src={viteLogo} className="vite" alt="Vite logo" />
+      <header className="navbar">
+        <h2 className="logo">Farmer–Labour Connect</h2>
+
+        <nav>
+          <a href="#home">Home</a>
+          <a href="#workers">Find Workers</a>
+          <a href="#jobs">Find Jobs</a>
+          <a href="#equipment">Equipment</a>
+        </nav>
+
+        <button className="login-btn">Login</button>
+      </header>
+
+      <section className="hero-section" id="home">
+        <h1>Connecting Farmers with Skilled Workers</h1>
+
+        <p>
+          Find agricultural labourers, discover farming jobs, and rent the
+          machinery you need — all in one place.
+        </p>
+
+        <div className="hero-buttons">
+          <button>Find Workers</button>
+          <button>Find Jobs</button>
         </div>
-        <div>
-          <h1 className="project-title">Farmer–Labour Connect</h1>
-          <p>Connecting farmers and agricultural workers</p>
-         
-        </div>
-        <button
-          type="button"
-          className="counter"
-          onClick={() => setCount((count) => count + 1)}
-        >
-          Count is {count}
-        </button>
       </section>
+
+      <section className="services-section">
+        <h2>Our Services</h2>
+
+        <div className="services-container">
+          <div className="service-card" id="workers">
+            <h3>Find Workers</h3>
+            <p>Connect with agricultural labourers for your farm.</p>
+          </div>
+
+          <div className="service-card" id="jobs">
+            <h3>Find Jobs</h3>
+            <p>Discover farming jobs that match your skills.</p>
+          </div>
+
+          <div className="service-card" id="equipment">
+            <h3>Rent Equipment</h3>
+            <p>Access tractors and other agricultural machinery.</p>
+          </div>
+        </div>
+      </section>
+
+      <footer>
+        <p>Farmer–Labour Connect</p>
+        <p>Connecting farmers, workers, and equipment owners.</p>
+      </footer>
 
       <div className="ticks"></div>
 
@@ -115,7 +162,7 @@ function App() {
       <div className="ticks"></div>
       <section id="spacer"></section>
     </>
-  )
+  );
 }
 
-export default App
+export default App;
