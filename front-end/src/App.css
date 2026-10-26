@@ -273,16 +273,22 @@
   padding: 30px;
 }
 
+
 .services-container {
   display: flex;
+  justify-content: center;
+  align-items: stretch;
   flex-wrap: wrap;
   gap: 20px;
 }
+
 .service-card {
   background-color: #f0f8f0;
   padding: 20px;
   border: 1px solid green;
-  width: 27.5%;
+  width: 27%;
+  min-width: 0;
+  box-sizing: border-box;
   border-radius: 12px;
 }
 
@@ -296,8 +302,6 @@ footer {
   text-align: center;
   padding: 15px;
 }
-
-
 
 /* Search box */
 .services-section input {
@@ -320,8 +324,138 @@ footer {
   cursor: pointer;
 }
 
-
 .services-section button:hover {
   background-color: #185c2b;
 }
 
+.worker-message {
+  margin-top: 12px;
+  padding: 10px;
+  background-color: #97ce9b;
+  border-radius: 8px;
+}
+
+.worker-message p {
+  margin-bottom: 10px;
+}
+
+.search-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.search-container input {
+  width: 50%;
+  padding: 12px;
+  box-sizing: border-box;
+}
+
+.search-container button {
+  padding: 12px 16px;
+  cursor: pointer;
+}
+
+@media (max-width: 600px) {
+  .search-container {
+    flex-direction: column;
+    padding: 0 16px;
+  }
+
+  .search-container input {
+    width: 100%;
+  }
+
+  .search-container button {
+    width: 100%;
+  }
+}
+
+
+@media (max-width: 600px) {
+  .hero-section h1 {
+    font-size: 30px;
+    line-height: 1.2;
+    overflow-wrap: break-word;
+  }
+}
+
+
+
+@media (max-width: 600px) {
+  .navbar {
+    flex-direction: column;
+    gap: 12px;
+    padding: 16px;
+  }
+
+  .navbar .logo {
+    margin: 0;
+    text-align: center;
+  }
+
+  .navbar nav {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 16px;
+  }
+
+  .navbar .login-btn {
+    width: 100%;
+    max-width: 200px;
+  }
+}
+
+
+@media (max-width: 600px) {
+  html,
+  body,
+  #root {
+    width: 100%;
+    max-width: 100%;
+    margin: 0;
+  }
+
+  * {
+    box-sizing: border-box;
+  }
+
+  .navbar,
+  .hero-section,
+  .services-section,
+  footer {
+    width: 100%;
+    max-width: 100%;
+  }
+
+  
+
+.services-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+  width: 100%;
+  padding: 0 16px;
+  box-sizing: border-box;
+}
+
+.service-card {
+  width: 100%;
+  max-width: 400px;
+  min-width: 0;
+  box-sizing: border-box;
+  overflow-wrap: break-word;
+}
+
+.service-card button {
+  max-width: 100%;
+  white-space: normal;
+  overflow-wrap: anywhere;
+}
+
+
+}
