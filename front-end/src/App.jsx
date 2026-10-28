@@ -71,6 +71,7 @@ function App() {
             Clear Search
           </button>
         </div>
+        
 
         <div className="services-container">
           {("find workers".includes(activeSearch.toLowerCase().trim()) ||
