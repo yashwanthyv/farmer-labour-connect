@@ -10,7 +10,8 @@ from .serializers import JobSerializer, LoginSerializer
 from rest_framework import status
 from rest_framework.authtoken.models import Token
 from .serializers import RegisterSerializer
-
+from rest_framework.permissions import IsAuthenticated
+from rest_framework.decorators import permission_classes
 
 @api_view(['GET'])
 def job_list(request):
@@ -63,3 +64,15 @@ def login_user(request):
         serializer.errors,
         status=status.HTTP_400_BAD_REQUEST
     )
+
+@api_view(['GET'])
+@permission_classes([IsAuthenticated])
+def my_jobs(request):
+    jobs = Job.objects.filter(
+        farmer=request.user,
+        is_active=True
+    )
+
+    serializer = JobSerializer(jobs, many=True)
+
+    return Response(serializer.data)
